@@ -1,0 +1,53 @@
+use optica
+
+db.providers.insertOne({
+  name: "Googles Associated SL",
+  address: {
+    street: "Dark Street",
+    number: 9,
+    floor: 1,
+    door: "A",
+    city: "Girona",
+    zip: "17001",
+    country: "Spain"
+  },
+  telephone: "123456789",
+  fax: "987654321",
+  nif: "B12345678"
+})
+
+db.glasses.insertOne({
+  brand: "Rayban",
+  graduation: { left: 2.3, right: 2.0 },
+  frame_type: "metallic",
+  frame_color: "black",
+  glass_color: { left: "transparent", right: "grey" },
+  price: 127.0,
+  provider_name: "Googles Associated SL"
+})
+
+db.employees.insertOne({
+  name: "Maria Lopez"
+})
+
+db.clients.insertOne({
+  name: "John Garcia",
+  address: {
+    street: "Right Street",
+    number: 123,
+    city: "Barcelona",
+    zip: "08001",
+    country: "Spain"
+  },
+  telephone: "678921235",
+  email: "email@email.com",
+  register_date: ISODate("2023-09-23T00:00:00Z"),
+  recommended_by: null
+})
+
+db.sales.insertOne({
+  client_name: "John Garcia",
+  employee_name: "Maria Lopez",
+  glasses_brand: "Rayban",
+  date: ISODate("2024-05-07T10:00:00Z")
+})
